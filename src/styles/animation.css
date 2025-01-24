@@ -1,0 +1,305 @@
+/* Global Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    color: #333;
+  }
+  
+  /* Keyframe Animations for specs */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes glowText {
+    0% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+    100% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+  }
+  
+  /* Home Section */
+  .home-section {
+    padding: 8rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #ff7f50, #ff6a00);
+    color: white;
+    position: relative;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .home-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fffbf5;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+    animation: scaleUp 1.5s ease-out;
+  }
+  
+  .highlight {
+    color: #ffeb3b;
+    /* font-style: italic; */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    color: #fffbf5;
+  }
+  
+  .specs {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  .spec-item {
+    font-size: 1.5rem;
+    color: #fffbf5;
+    font-weight: 600;
+    position: relative;
+    animation: fadeInUp 1.5s ease-in-out forwards, glowText 1.5s ease-in-out infinite;
+    padding: 1rem;
+    background: linear-gradient(135deg, #fbbf24, #f472b6);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .spec-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Spec Items with Staggered Animation */
+  .spec-item:nth-child(1) {
+    animation-delay: 0.5s;
+  }
+  
+  .spec-item:nth-child(2) {
+    animation-delay: 1s;
+  }
+  
+  .spec-item:nth-child(3) {
+    animation-delay: 1.5s;
+  }
+  
+  /* Header Styles */
+  .header {
+    background: linear-gradient(135deg, #3b82f6, #9333ea);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #fbbf24, #f472b6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .nav-menu a {
+    font-size: 1.25rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-menu a:hover {
+    color: #fbbf24;
+    transform: scale(1.1);
+  }
+  
+  .sticky-header {
+    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+  }
+  
+  .sticky-header.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1.5rem 1rem;
+  }
+  
+  /* About Section */
+  .about-section {
+    background-color: #f7f7f7;
+    padding: 4rem 2rem;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .about-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 1rem;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  .about-description:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+  
+  /* Projects Section */
+  .projects-section {
+    padding: 5rem 2rem;
+    background: #e0f7fa;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .project-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00796b;
+    margin-top: 1rem;
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+  
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    background: linear-gradient(135deg, #ffccbc, #ff7043);
+    padding: 5rem 2rem;
+    text-align: center;
+    color: white;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .contact-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  
+  .contact-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    background: transparent;
+    color: #ffffff;
+  }
+  
+  .contact-form button {
+    background: #ff7043;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background: #ff5722;
+  }
+  
+  @media (max-width: 768px) {
+    .home-title {
+      font-size: 2.5rem;
+    }
+  
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .specs {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .spec-item {
+      font-size: 1.1rem;
+    }
+  
+    .about-title {
+      font-size: 2.5rem;
+    }
+  
+    .project-card {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+  }
+  
